@@ -1,17 +1,10 @@
 import {Component} from '@angular/core';
-import {Routes, ROUTER_DIRECTIVES} from '@angular/router';
-import {Items} from './items/items.component';
+import {Foods} from './foods/foods.component';
 
 @Component({
   selector: 'my-app',
   template: require('./app.html'),
-  directives: [ROUTER_DIRECTIVES]
+  directives: [Foods]
 })
-@Routes([
-  {path: '/items', component: Items}
-])
-export class App {
-  links = {
-    items: ['/items']
-  };
-}
+
+export class App {}

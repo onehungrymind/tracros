@@ -22,9 +22,6 @@ body {
   min-height: inherit;
   cursor: pointer;
 }
-.item-card .mdl-textfield {
-  width: 100%;
-}
 .item-card .mdl-textfield__input {
   border: none;
   border-bottom: 1px solid rgba(0, 0, 0, .12);
