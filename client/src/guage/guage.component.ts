@@ -35,10 +35,10 @@ import 'rxjs/add/operator/do';
           color: #444 !important;
         }
         .warning .fill {
-          background-color: #c5c717 !important;
+          background-color: #Fff62F !important;
         }
         .danger .fill {
-          background-color: #c76817 !important;
+          background-color: #FF8300 !important;
         }
         .failure .fill {
           background-color: #d83030 !important;
