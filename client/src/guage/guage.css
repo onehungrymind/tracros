@@ -20,9 +20,9 @@
 .radial-progress .circle .mask,
 .radial-progress .circle .fill {
   -webkit-backface-visibility: hidden;
-  transition: -webkit-transform 1s;
-  transition: -ms-transform 1s;
-  transition: transform 1s;
+  transition: -webkit-transform 1s, background-color 1s;
+  transition: -ms-transform 1s, background-color 1s;
+  transition: transform 1s, background-color 1s;
   border-radius: 50%;
 }
 .radial-progress .circle .mask {
