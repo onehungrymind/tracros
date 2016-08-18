@@ -4,7 +4,7 @@
   "description": "A macronturient tracking application built in Angular 2 and Firebase",
   "repository": "https://github.com/onehungrymind/tracros",
   "scripts": {
-    "build": "webpack && cp builder/index.build.html build/index.html",
+    "build": "webpack && cp builder/index.build.html build/index.html && cp -r client/public/assets build/",
     "client": "npm run client:dev:hmr",
     "client:dev": "webpack-dev-server --inline --colors --watch --display-error-details --display-cached  --port 3000 --content-base client/public",
     "client:dev:hmr": "npm run client:dev -- --hot",
