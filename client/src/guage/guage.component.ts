@@ -72,6 +72,15 @@ export class Guage {
           const percentage = Math.round(total / this.threshold * 100);
           this.percentage = percentage <= 100 ? percentage : 100;
         });
+
+      // TODO: alternate implementation; get feedback
+      // this.level = this.foods
+      //   .flatMap(food => food)
+      //   .scan((acc, curr) => acc + parseInt(curr[field], 10), 0)
+      //   .do(total => {
+      //     const percentage = Math.round(total / this.threshold * 100);
+      //     this.percentage = percentage <= 100 ? percentage : 100;
+      //   });
     }
 
     getClassDefs() {
