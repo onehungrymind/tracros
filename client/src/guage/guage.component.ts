@@ -4,7 +4,6 @@ import {Food} from '../foods/food.model';
 import {FirebaseListObservable} from 'angularfire2';
 import 'rxjs/add/operator/scan';
 import 'rxjs/add/operator/do';
-import 'rxjs/core/';
 
 @Component({
   selector: 'guage',
@@ -46,11 +45,10 @@ export class Guage {
     ngOnInit() {
       const field = this.label.toLowerCase();
       this.foods
-        .map(foods => foods.map(food => food.protein))
-        .sum()
-        .do(protein => console.log('PROTEIN', protein))
-        .subscribe(() => {
-          console.log('done');
+        .map(foods => foods.map(food => food[field]))
+        .map(nutrients => nutrients.reduce((acc, curr) => parseInt(acc, 10) + parseInt(curr, 10)))
+        .subscribe(total => {
+          console.log(`TOTAL ${field.toUpperCase()} COUNT`, total);
         });
     }
 }
