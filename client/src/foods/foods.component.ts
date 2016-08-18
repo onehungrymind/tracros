@@ -3,6 +3,7 @@ import {AngularFire, FirebaseListObservable} from 'angularfire2';
 import {FoodsList} from './foods-list.component';
 import {FoodDetail} from './food-detail.component';
 import {Food} from './food.model';
+import {profile} from '../profile/mockProfile';
 
 @Component({
   selector: 'foods',
@@ -46,6 +47,10 @@ export class Foods implements OnInit {
   saveFood(food: Food) {
     const key = food.$key;
     delete food.$key;
+    profile.metrics.forEach(metric => {
+      const metricKey = metric.name.toLowerCase();
+      food[metricKey] = food[metricKey] || 0;
+    });
     key ? this.foods.update(key, food) : this.foods.push(food);
 
     // Generally, we would want to wait for the result of `foodsService.saveFood`
