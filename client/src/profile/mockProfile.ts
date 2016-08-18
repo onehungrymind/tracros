@@ -1,8 +1,8 @@
-export const profile: Object = {
-  thresholds: {
-    protein: 300,
-    fat: 200,
-    carbs: 200,
-    calories: 1000
-  }
+export const profile: any = {
+  metrics: [
+    {name: 'Protein', threshold: '1000'},
+    {name: 'Fat', threshold: '1000'},
+    {name: 'Carbs', threshold: '1000'},
+    {name: 'Calories', threshold: '1000'}
+  ]
 };
