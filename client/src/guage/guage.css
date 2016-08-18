@@ -1,0 +1,1471 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic);
+.radial-progress {
+  margin: 0 auto;
+  position: relative;
+  width: 150px;
+  height: 150px;
+  background-color: #d6dadc;
+  border-radius: 50%;
+}
+.radial-progress .circle .mask,
+.radial-progress .circle .fill,
+.radial-progress .circle .shadow {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  border-radius: 50%;
+}
+.radial-progress .circle .shadow {
+  box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.2) inset;
+}
+.radial-progress .circle .mask,
+.radial-progress .circle .fill {
+  -webkit-backface-visibility: hidden;
+  transition: -webkit-transform 1s;
+  transition: -ms-transform 1s;
+  transition: transform 1s;
+  border-radius: 50%;
+}
+.radial-progress .circle .mask {
+  clip: rect(0px, 150px, 150px, 75px);
+}
+.radial-progress .circle .mask .fill {
+  clip: rect(0px, 75px, 150px, 0px);
+  background-color: #97a71d;
+}
+.radial-progress .inset {
+  width: 90px;
+  height: 90px;
+  position: absolute;
+  margin-left: 30px;
+  margin-top: 30px;
+  background-color: #fbfbfb;
+  border-radius: 50%;
+  box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.2);
+}
+.radial-progress .inset .percentage {
+  width: 57px;
+  position: absolute;
+  top: 34px;
+  left: 16.5px;
+  line-height: 1;
+  text-align: center;
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #97a71d;
+  font-weight: 800;
+  font-size: 22px;
+}
+.radial-progress[title="0"] .circle .mask.full,
+.radial-progress[title="0"] .circle .fill {
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+.radial-progress[title="0"] .circle .fill.fix {
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+.radial-progress[title="0"] .inset .percentage:before {
+  content: "0%";
+}
+.radial-progress[title="1"] .circle .mask.full,
+.radial-progress[title="1"] .circle .fill {
+  -webkit-transform: rotate(1.8deg);
+  -ms-transform: rotate(1.8deg);
+  transform: rotate(1.8deg);
+}
+.radial-progress[title="1"] .circle .fill.fix {
+  -webkit-transform: rotate(3.6deg);
+  -ms-transform: rotate(3.6deg);
+  transform: rotate(3.6deg);
+}
+.radial-progress[title="1"] .inset .percentage:before {
+  content: "1%";
+}
+.radial-progress[title="2"] .circle .mask.full,
+.radial-progress[title="2"] .circle .fill {
+  -webkit-transform: rotate(3.6deg);
+  -ms-transform: rotate(3.6deg);
+  transform: rotate(3.6deg);
+}
+.radial-progress[title="2"] .circle .fill.fix {
+  -webkit-transform: rotate(7.2deg);
+  -ms-transform: rotate(7.2deg);
+  transform: rotate(7.2deg);
+}
+.radial-progress[title="2"] .inset .percentage:before {
+  content: "2%";
+}
+.radial-progress[title="3"] .circle .mask.full,
+.radial-progress[title="3"] .circle .fill {
+  -webkit-transform: rotate(5.4deg);
+  -ms-transform: rotate(5.4deg);
+  transform: rotate(5.4deg);
+}
+.radial-progress[title="3"] .circle .fill.fix {
+  -webkit-transform: rotate(10.8deg);
+  -ms-transform: rotate(10.8deg);
+  transform: rotate(10.8deg);
+}
+.radial-progress[title="3"] .inset .percentage:before {
+  content: "3%";
+}
+.radial-progress[title="4"] .circle .mask.full,
+.radial-progress[title="4"] .circle .fill {
+  -webkit-transform: rotate(7.2deg);
+  -ms-transform: rotate(7.2deg);
+  transform: rotate(7.2deg);
+}
+.radial-progress[title="4"] .circle .fill.fix {
+  -webkit-transform: rotate(14.4deg);
+  -ms-transform: rotate(14.4deg);
+  transform: rotate(14.4deg);
+}
+.radial-progress[title="4"] .inset .percentage:before {
+  content: "4%";
+}
+.radial-progress[title="5"] .circle .mask.full,
+.radial-progress[title="5"] .circle .fill {
+  -webkit-transform: rotate(9deg);
+  -ms-transform: rotate(9deg);
+  transform: rotate(9deg);
+}
+.radial-progress[title="5"] .circle .fill.fix {
+  -webkit-transform: rotate(18deg);
+  -ms-transform: rotate(18deg);
+  transform: rotate(18deg);
+}
+.radial-progress[title="5"] .inset .percentage:before {
+  content: "5%";
+}
+.radial-progress[title="6"] .circle .mask.full,
+.radial-progress[title="6"] .circle .fill {
+  -webkit-transform: rotate(10.8deg);
+  -ms-transform: rotate(10.8deg);
+  transform: rotate(10.8deg);
+}
+.radial-progress[title="6"] .circle .fill.fix {
+  -webkit-transform: rotate(21.6deg);
+  -ms-transform: rotate(21.6deg);
+  transform: rotate(21.6deg);
+}
+.radial-progress[title="6"] .inset .percentage:before {
+  content: "6%";
+}
+.radial-progress[title="7"] .circle .mask.full,
+.radial-progress[title="7"] .circle .fill {
+  -webkit-transform: rotate(12.6deg);
+  -ms-transform: rotate(12.6deg);
+  transform: rotate(12.6deg);
+}
+.radial-progress[title="7"] .circle .fill.fix {
+  -webkit-transform: rotate(25.2deg);
+  -ms-transform: rotate(25.2deg);
+  transform: rotate(25.2deg);
+}
+.radial-progress[title="7"] .inset .percentage:before {
+  content: "7%";
+}
+.radial-progress[title="8"] .circle .mask.full,
+.radial-progress[title="8"] .circle .fill {
+  -webkit-transform: rotate(14.4deg);
+  -ms-transform: rotate(14.4deg);
+  transform: rotate(14.4deg);
+}
+.radial-progress[title="8"] .circle .fill.fix {
+  -webkit-transform: rotate(28.8deg);
+  -ms-transform: rotate(28.8deg);
+  transform: rotate(28.8deg);
+}
+.radial-progress[title="8"] .inset .percentage:before {
+  content: "8%";
+}
+.radial-progress[title="9"] .circle .mask.full,
+.radial-progress[title="9"] .circle .fill {
+  -webkit-transform: rotate(16.2deg);
+  -ms-transform: rotate(16.2deg);
+  transform: rotate(16.2deg);
+}
+.radial-progress[title="9"] .circle .fill.fix {
+  -webkit-transform: rotate(32.4deg);
+  -ms-transform: rotate(32.4deg);
+  transform: rotate(32.4deg);
+}
+.radial-progress[title="9"] .inset .percentage:before {
+  content: "9%";
+}
+.radial-progress[title="10"] .circle .mask.full,
+.radial-progress[title="10"] .circle .fill {
+  -webkit-transform: rotate(18deg);
+  -ms-transform: rotate(18deg);
+  transform: rotate(18deg);
+}
+.radial-progress[title="10"] .circle .fill.fix {
+  -webkit-transform: rotate(36deg);
+  -ms-transform: rotate(36deg);
+  transform: rotate(36deg);
+}
+.radial-progress[title="10"] .inset .percentage:before {
+  content: "10%";
+}
+.radial-progress[title="11"] .circle .mask.full,
+.radial-progress[title="11"] .circle .fill {
+  -webkit-transform: rotate(19.8deg);
+  -ms-transform: rotate(19.8deg);
+  transform: rotate(19.8deg);
+}
+.radial-progress[title="11"] .circle .fill.fix {
+  -webkit-transform: rotate(39.6deg);
+  -ms-transform: rotate(39.6deg);
+  transform: rotate(39.6deg);
+}
+.radial-progress[title="11"] .inset .percentage:before {
+  content: "11%";
+}
+.radial-progress[title="12"] .circle .mask.full,
+.radial-progress[title="12"] .circle .fill {
+  -webkit-transform: rotate(21.6deg);
+  -ms-transform: rotate(21.6deg);
+  transform: rotate(21.6deg);
+}
+.radial-progress[title="12"] .circle .fill.fix {
+  -webkit-transform: rotate(43.2deg);
+  -ms-transform: rotate(43.2deg);
+  transform: rotate(43.2deg);
+}
+.radial-progress[title="12"] .inset .percentage:before {
+  content: "12%";
+}
+.radial-progress[title="13"] .circle .mask.full,
+.radial-progress[title="13"] .circle .fill {
+  -webkit-transform: rotate(23.400000000000002deg);
+  -ms-transform: rotate(23.400000000000002deg);
+  transform: rotate(23.400000000000002deg);
+}
+.radial-progress[title="13"] .circle .fill.fix {
+  -webkit-transform: rotate(46.800000000000004deg);
+  -ms-transform: rotate(46.800000000000004deg);
+  transform: rotate(46.800000000000004deg);
+}
+.radial-progress[title="13"] .inset .percentage:before {
+  content: "13%";
+}
+.radial-progress[title="14"] .circle .mask.full,
+.radial-progress[title="14"] .circle .fill {
+  -webkit-transform: rotate(25.2deg);
+  -ms-transform: rotate(25.2deg);
+  transform: rotate(25.2deg);
+}
+.radial-progress[title="14"] .circle .fill.fix {
+  -webkit-transform: rotate(50.4deg);
+  -ms-transform: rotate(50.4deg);
+  transform: rotate(50.4deg);
+}
+.radial-progress[title="14"] .inset .percentage:before {
+  content: "14%";
+}
+.radial-progress[title="15"] .circle .mask.full,
+.radial-progress[title="15"] .circle .fill {
+  -webkit-transform: rotate(27deg);
+  -ms-transform: rotate(27deg);
+  transform: rotate(27deg);
+}
+.radial-progress[title="15"] .circle .fill.fix {
+  -webkit-transform: rotate(54deg);
+  -ms-transform: rotate(54deg);
+  transform: rotate(54deg);
+}
+.radial-progress[title="15"] .inset .percentage:before {
+  content: "15%";
+}
+.radial-progress[title="16"] .circle .mask.full,
+.radial-progress[title="16"] .circle .fill {
+  -webkit-transform: rotate(28.8deg);
+  -ms-transform: rotate(28.8deg);
+  transform: rotate(28.8deg);
+}
+.radial-progress[title="16"] .circle .fill.fix {
+  -webkit-transform: rotate(57.6deg);
+  -ms-transform: rotate(57.6deg);
+  transform: rotate(57.6deg);
+}
+.radial-progress[title="16"] .inset .percentage:before {
+  content: "16%";
+}
+.radial-progress[title="17"] .circle .mask.full,
+.radial-progress[title="17"] .circle .fill {
+  -webkit-transform: rotate(30.6deg);
+  -ms-transform: rotate(30.6deg);
+  transform: rotate(30.6deg);
+}
+.radial-progress[title="17"] .circle .fill.fix {
+  -webkit-transform: rotate(61.2deg);
+  -ms-transform: rotate(61.2deg);
+  transform: rotate(61.2deg);
+}
+.radial-progress[title="17"] .inset .percentage:before {
+  content: "17%";
+}
+.radial-progress[title="18"] .circle .mask.full,
+.radial-progress[title="18"] .circle .fill {
+  -webkit-transform: rotate(32.4deg);
+  -ms-transform: rotate(32.4deg);
+  transform: rotate(32.4deg);
+}
+.radial-progress[title="18"] .circle .fill.fix {
+  -webkit-transform: rotate(64.8deg);
+  -ms-transform: rotate(64.8deg);
+  transform: rotate(64.8deg);
+}
+.radial-progress[title="18"] .inset .percentage:before {
+  content: "18%";
+}
+.radial-progress[title="19"] .circle .mask.full,
+.radial-progress[title="19"] .circle .fill {
+  -webkit-transform: rotate(34.2deg);
+  -ms-transform: rotate(34.2deg);
+  transform: rotate(34.2deg);
+}
+.radial-progress[title="19"] .circle .fill.fix {
+  -webkit-transform: rotate(68.4deg);
+  -ms-transform: rotate(68.4deg);
+  transform: rotate(68.4deg);
+}
+.radial-progress[title="19"] .inset .percentage:before {
+  content: "19%";
+}
+.radial-progress[title="20"] .circle .mask.full,
+.radial-progress[title="20"] .circle .fill {
+  -webkit-transform: rotate(36deg);
+  -ms-transform: rotate(36deg);
+  transform: rotate(36deg);
+}
+.radial-progress[title="20"] .circle .fill.fix {
+  -webkit-transform: rotate(72deg);
+  -ms-transform: rotate(72deg);
+  transform: rotate(72deg);
+}
+.radial-progress[title="20"] .inset .percentage:before {
+  content: "20%";
+}
+.radial-progress[title="21"] .circle .mask.full,
+.radial-progress[title="21"] .circle .fill {
+  -webkit-transform: rotate(37.800000000000004deg);
+  -ms-transform: rotate(37.800000000000004deg);
+  transform: rotate(37.800000000000004deg);
+}
+.radial-progress[title="21"] .circle .fill.fix {
+  -webkit-transform: rotate(75.60000000000001deg);
+  -ms-transform: rotate(75.60000000000001deg);
+  transform: rotate(75.60000000000001deg);
+}
+.radial-progress[title="21"] .inset .percentage:before {
+  content: "21%";
+}
+.radial-progress[title="22"] .circle .mask.full,
+.radial-progress[title="22"] .circle .fill {
+  -webkit-transform: rotate(39.6deg);
+  -ms-transform: rotate(39.6deg);
+  transform: rotate(39.6deg);
+}
+.radial-progress[title="22"] .circle .fill.fix {
+  -webkit-transform: rotate(79.2deg);
+  -ms-transform: rotate(79.2deg);
+  transform: rotate(79.2deg);
+}
+.radial-progress[title="22"] .inset .percentage:before {
+  content: "22%";
+}
+.radial-progress[title="23"] .circle .mask.full,
+.radial-progress[title="23"] .circle .fill {
+  -webkit-transform: rotate(41.4deg);
+  -ms-transform: rotate(41.4deg);
+  transform: rotate(41.4deg);
+}
+.radial-progress[title="23"] .circle .fill.fix {
+  -webkit-transform: rotate(82.8deg);
+  -ms-transform: rotate(82.8deg);
+  transform: rotate(82.8deg);
+}
+.radial-progress[title="23"] .inset .percentage:before {
+  content: "23%";
+}
+.radial-progress[title="24"] .circle .mask.full,
+.radial-progress[title="24"] .circle .fill {
+  -webkit-transform: rotate(43.2deg);
+  -ms-transform: rotate(43.2deg);
+  transform: rotate(43.2deg);
+}
+.radial-progress[title="24"] .circle .fill.fix {
+  -webkit-transform: rotate(86.4deg);
+  -ms-transform: rotate(86.4deg);
+  transform: rotate(86.4deg);
+}
+.radial-progress[title="24"] .inset .percentage:before {
+  content: "24%";
+}
+.radial-progress[title="25"] .circle .mask.full,
+.radial-progress[title="25"] .circle .fill {
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.radial-progress[title="25"] .circle .fill.fix {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.radial-progress[title="25"] .inset .percentage:before {
+  content: "25%";
+}
+.radial-progress[title="26"] .circle .mask.full,
+.radial-progress[title="26"] .circle .fill {
+  -webkit-transform: rotate(46.800000000000004deg);
+  -ms-transform: rotate(46.800000000000004deg);
+  transform: rotate(46.800000000000004deg);
+}
+.radial-progress[title="26"] .circle .fill.fix {
+  -webkit-transform: rotate(93.60000000000001deg);
+  -ms-transform: rotate(93.60000000000001deg);
+  transform: rotate(93.60000000000001deg);
+}
+.radial-progress[title="26"] .inset .percentage:before {
+  content: "26%";
+}
+.radial-progress[title="27"] .circle .mask.full,
+.radial-progress[title="27"] .circle .fill {
+  -webkit-transform: rotate(48.6deg);
+  -ms-transform: rotate(48.6deg);
+  transform: rotate(48.6deg);
+}
+.radial-progress[title="27"] .circle .fill.fix {
+  -webkit-transform: rotate(97.2deg);
+  -ms-transform: rotate(97.2deg);
+  transform: rotate(97.2deg);
+}
+.radial-progress[title="27"] .inset .percentage:before {
+  content: "27%";
+}
+.radial-progress[title="28"] .circle .mask.full,
+.radial-progress[title="28"] .circle .fill {
+  -webkit-transform: rotate(50.4deg);
+  -ms-transform: rotate(50.4deg);
+  transform: rotate(50.4deg);
+}
+.radial-progress[title="28"] .circle .fill.fix {
+  -webkit-transform: rotate(100.8deg);
+  -ms-transform: rotate(100.8deg);
+  transform: rotate(100.8deg);
+}
+.radial-progress[title="28"] .inset .percentage:before {
+  content: "28%";
+}
+.radial-progress[title="29"] .circle .mask.full,
+.radial-progress[title="29"] .circle .fill {
+  -webkit-transform: rotate(52.2deg);
+  -ms-transform: rotate(52.2deg);
+  transform: rotate(52.2deg);
+}
+.radial-progress[title="29"] .circle .fill.fix {
+  -webkit-transform: rotate(104.4deg);
+  -ms-transform: rotate(104.4deg);
+  transform: rotate(104.4deg);
+}
+.radial-progress[title="29"] .inset .percentage:before {
+  content: "29%";
+}
+.radial-progress[title="30"] .circle .mask.full,
+.radial-progress[title="30"] .circle .fill {
+  -webkit-transform: rotate(54deg);
+  -ms-transform: rotate(54deg);
+  transform: rotate(54deg);
+}
+.radial-progress[title="30"] .circle .fill.fix {
+  -webkit-transform: rotate(108deg);
+  -ms-transform: rotate(108deg);
+  transform: rotate(108deg);
+}
+.radial-progress[title="30"] .inset .percentage:before {
+  content: "30%";
+}
+.radial-progress[title="31"] .circle .mask.full,
+.radial-progress[title="31"] .circle .fill {
+  -webkit-transform: rotate(55.800000000000004deg);
+  -ms-transform: rotate(55.800000000000004deg);
+  transform: rotate(55.800000000000004deg);
+}
+.radial-progress[title="31"] .circle .fill.fix {
+  -webkit-transform: rotate(111.60000000000001deg);
+  -ms-transform: rotate(111.60000000000001deg);
+  transform: rotate(111.60000000000001deg);
+}
+.radial-progress[title="31"] .inset .percentage:before {
+  content: "31%";
+}
+.radial-progress[title="32"] .circle .mask.full,
+.radial-progress[title="32"] .circle .fill {
+  -webkit-transform: rotate(57.6deg);
+  -ms-transform: rotate(57.6deg);
+  transform: rotate(57.6deg);
+}
+.radial-progress[title="32"] .circle .fill.fix {
+  -webkit-transform: rotate(115.2deg);
+  -ms-transform: rotate(115.2deg);
+  transform: rotate(115.2deg);
+}
+.radial-progress[title="32"] .inset .percentage:before {
+  content: "32%";
+}
+.radial-progress[title="33"] .circle .mask.full,
+.radial-progress[title="33"] .circle .fill {
+  -webkit-transform: rotate(59.4deg);
+  -ms-transform: rotate(59.4deg);
+  transform: rotate(59.4deg);
+}
+.radial-progress[title="33"] .circle .fill.fix {
+  -webkit-transform: rotate(118.8deg);
+  -ms-transform: rotate(118.8deg);
+  transform: rotate(118.8deg);
+}
+.radial-progress[title="33"] .inset .percentage:before {
+  content: "33%";
+}
+.radial-progress[title="34"] .circle .mask.full,
+.radial-progress[title="34"] .circle .fill {
+  -webkit-transform: rotate(61.2deg);
+  -ms-transform: rotate(61.2deg);
+  transform: rotate(61.2deg);
+}
+.radial-progress[title="34"] .circle .fill.fix {
+  -webkit-transform: rotate(122.4deg);
+  -ms-transform: rotate(122.4deg);
+  transform: rotate(122.4deg);
+}
+.radial-progress[title="34"] .inset .percentage:before {
+  content: "34%";
+}
+.radial-progress[title="35"] .circle .mask.full,
+.radial-progress[title="35"] .circle .fill {
+  -webkit-transform: rotate(63deg);
+  -ms-transform: rotate(63deg);
+  transform: rotate(63deg);
+}
+.radial-progress[title="35"] .circle .fill.fix {
+  -webkit-transform: rotate(126deg);
+  -ms-transform: rotate(126deg);
+  transform: rotate(126deg);
+}
+.radial-progress[title="35"] .inset .percentage:before {
+  content: "35%";
+}
+.radial-progress[title="36"] .circle .mask.full,
+.radial-progress[title="36"] .circle .fill {
+  -webkit-transform: rotate(64.8deg);
+  -ms-transform: rotate(64.8deg);
+  transform: rotate(64.8deg);
+}
+.radial-progress[title="36"] .circle .fill.fix {
+  -webkit-transform: rotate(129.6deg);
+  -ms-transform: rotate(129.6deg);
+  transform: rotate(129.6deg);
+}
+.radial-progress[title="36"] .inset .percentage:before {
+  content: "36%";
+}
+.radial-progress[title="37"] .circle .mask.full,
+.radial-progress[title="37"] .circle .fill {
+  -webkit-transform: rotate(66.60000000000001deg);
+  -ms-transform: rotate(66.60000000000001deg);
+  transform: rotate(66.60000000000001deg);
+}
+.radial-progress[title="37"] .circle .fill.fix {
+  -webkit-transform: rotate(133.20000000000002deg);
+  -ms-transform: rotate(133.20000000000002deg);
+  transform: rotate(133.20000000000002deg);
+}
+.radial-progress[title="37"] .inset .percentage:before {
+  content: "37%";
+}
+.radial-progress[title="38"] .circle .mask.full,
+.radial-progress[title="38"] .circle .fill {
+  -webkit-transform: rotate(68.4deg);
+  -ms-transform: rotate(68.4deg);
+  transform: rotate(68.4deg);
+}
+.radial-progress[title="38"] .circle .fill.fix {
+  -webkit-transform: rotate(136.8deg);
+  -ms-transform: rotate(136.8deg);
+  transform: rotate(136.8deg);
+}
+.radial-progress[title="38"] .inset .percentage:before {
+  content: "38%";
+}
+.radial-progress[title="39"] .circle .mask.full,
+.radial-progress[title="39"] .circle .fill {
+  -webkit-transform: rotate(70.2deg);
+  -ms-transform: rotate(70.2deg);
+  transform: rotate(70.2deg);
+}
+.radial-progress[title="39"] .circle .fill.fix {
+  -webkit-transform: rotate(140.4deg);
+  -ms-transform: rotate(140.4deg);
+  transform: rotate(140.4deg);
+}
+.radial-progress[title="39"] .inset .percentage:before {
+  content: "39%";
+}
+.radial-progress[title="40"] .circle .mask.full,
+.radial-progress[title="40"] .circle .fill {
+  -webkit-transform: rotate(72deg);
+  -ms-transform: rotate(72deg);
+  transform: rotate(72deg);
+}
+.radial-progress[title="40"] .circle .fill.fix {
+  -webkit-transform: rotate(144deg);
+  -ms-transform: rotate(144deg);
+  transform: rotate(144deg);
+}
+.radial-progress[title="40"] .inset .percentage:before {
+  content: "40%";
+}
+.radial-progress[title="41"] .circle .mask.full,
+.radial-progress[title="41"] .circle .fill {
+  -webkit-transform: rotate(73.8deg);
+  -ms-transform: rotate(73.8deg);
+  transform: rotate(73.8deg);
+}
+.radial-progress[title="41"] .circle .fill.fix {
+  -webkit-transform: rotate(147.6deg);
+  -ms-transform: rotate(147.6deg);
+  transform: rotate(147.6deg);
+}
+.radial-progress[title="41"] .inset .percentage:before {
+  content: "41%";
+}
+.radial-progress[title="42"] .circle .mask.full,
+.radial-progress[title="42"] .circle .fill {
+  -webkit-transform: rotate(75.60000000000001deg);
+  -ms-transform: rotate(75.60000000000001deg);
+  transform: rotate(75.60000000000001deg);
+}
+.radial-progress[title="42"] .circle .fill.fix {
+  -webkit-transform: rotate(151.20000000000002deg);
+  -ms-transform: rotate(151.20000000000002deg);
+  transform: rotate(151.20000000000002deg);
+}
+.radial-progress[title="42"] .inset .percentage:before {
+  content: "42%";
+}
+.radial-progress[title="43"] .circle .mask.full,
+.radial-progress[title="43"] .circle .fill {
+  -webkit-transform: rotate(77.4deg);
+  -ms-transform: rotate(77.4deg);
+  transform: rotate(77.4deg);
+}
+.radial-progress[title="43"] .circle .fill.fix {
+  -webkit-transform: rotate(154.8deg);
+  -ms-transform: rotate(154.8deg);
+  transform: rotate(154.8deg);
+}
+.radial-progress[title="43"] .inset .percentage:before {
+  content: "43%";
+}
+.radial-progress[title="44"] .circle .mask.full,
+.radial-progress[title="44"] .circle .fill {
+  -webkit-transform: rotate(79.2deg);
+  -ms-transform: rotate(79.2deg);
+  transform: rotate(79.2deg);
+}
+.radial-progress[title="44"] .circle .fill.fix {
+  -webkit-transform: rotate(158.4deg);
+  -ms-transform: rotate(158.4deg);
+  transform: rotate(158.4deg);
+}
+.radial-progress[title="44"] .inset .percentage:before {
+  content: "44%";
+}
+.radial-progress[title="45"] .circle .mask.full,
+.radial-progress[title="45"] .circle .fill {
+  -webkit-transform: rotate(81deg);
+  -ms-transform: rotate(81deg);
+  transform: rotate(81deg);
+}
+.radial-progress[title="45"] .circle .fill.fix {
+  -webkit-transform: rotate(162deg);
+  -ms-transform: rotate(162deg);
+  transform: rotate(162deg);
+}
+.radial-progress[title="45"] .inset .percentage:before {
+  content: "45%";
+}
+.radial-progress[title="46"] .circle .mask.full,
+.radial-progress[title="46"] .circle .fill {
+  -webkit-transform: rotate(82.8deg);
+  -ms-transform: rotate(82.8deg);
+  transform: rotate(82.8deg);
+}
+.radial-progress[title="46"] .circle .fill.fix {
+  -webkit-transform: rotate(165.6deg);
+  -ms-transform: rotate(165.6deg);
+  transform: rotate(165.6deg);
+}
+.radial-progress[title="46"] .inset .percentage:before {
+  content: "46%";
+}
+.radial-progress[title="47"] .circle .mask.full,
+.radial-progress[title="47"] .circle .fill {
+  -webkit-transform: rotate(84.60000000000001deg);
+  -ms-transform: rotate(84.60000000000001deg);
+  transform: rotate(84.60000000000001deg);
+}
+.radial-progress[title="47"] .circle .fill.fix {
+  -webkit-transform: rotate(169.20000000000002deg);
+  -ms-transform: rotate(169.20000000000002deg);
+  transform: rotate(169.20000000000002deg);
+}
+.radial-progress[title="47"] .inset .percentage:before {
+  content: "47%";
+}
+.radial-progress[title="48"] .circle .mask.full,
+.radial-progress[title="48"] .circle .fill {
+  -webkit-transform: rotate(86.4deg);
+  -ms-transform: rotate(86.4deg);
+  transform: rotate(86.4deg);
+}
+.radial-progress[title="48"] .circle .fill.fix {
+  -webkit-transform: rotate(172.8deg);
+  -ms-transform: rotate(172.8deg);
+  transform: rotate(172.8deg);
+}
+.radial-progress[title="48"] .inset .percentage:before {
+  content: "48%";
+}
+.radial-progress[title="49"] .circle .mask.full,
+.radial-progress[title="49"] .circle .fill {
+  -webkit-transform: rotate(88.2deg);
+  -ms-transform: rotate(88.2deg);
+  transform: rotate(88.2deg);
+}
+.radial-progress[title="49"] .circle .fill.fix {
+  -webkit-transform: rotate(176.4deg);
+  -ms-transform: rotate(176.4deg);
+  transform: rotate(176.4deg);
+}
+.radial-progress[title="49"] .inset .percentage:before {
+  content: "49%";
+}
+.radial-progress[title="50"] .circle .mask.full,
+.radial-progress[title="50"] .circle .fill {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.radial-progress[title="50"] .circle .fill.fix {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.radial-progress[title="50"] .inset .percentage:before {
+  content: "50%";
+}
+.radial-progress[title="51"] .circle .mask.full,
+.radial-progress[title="51"] .circle .fill {
+  -webkit-transform: rotate(91.8deg);
+  -ms-transform: rotate(91.8deg);
+  transform: rotate(91.8deg);
+}
+.radial-progress[title="51"] .circle .fill.fix {
+  -webkit-transform: rotate(183.6deg);
+  -ms-transform: rotate(183.6deg);
+  transform: rotate(183.6deg);
+}
+.radial-progress[title="51"] .inset .percentage:before {
+  content: "51%";
+}
+.radial-progress[title="52"] .circle .mask.full,
+.radial-progress[title="52"] .circle .fill {
+  -webkit-transform: rotate(93.60000000000001deg);
+  -ms-transform: rotate(93.60000000000001deg);
+  transform: rotate(93.60000000000001deg);
+}
+.radial-progress[title="52"] .circle .fill.fix {
+  -webkit-transform: rotate(187.20000000000002deg);
+  -ms-transform: rotate(187.20000000000002deg);
+  transform: rotate(187.20000000000002deg);
+}
+.radial-progress[title="52"] .inset .percentage:before {
+  content: "52%";
+}
+.radial-progress[title="53"] .circle .mask.full,
+.radial-progress[title="53"] .circle .fill {
+  -webkit-transform: rotate(95.4deg);
+  -ms-transform: rotate(95.4deg);
+  transform: rotate(95.4deg);
+}
+.radial-progress[title="53"] .circle .fill.fix {
+  -webkit-transform: rotate(190.8deg);
+  -ms-transform: rotate(190.8deg);
+  transform: rotate(190.8deg);
+}
+.radial-progress[title="53"] .inset .percentage:before {
+  content: "53%";
+}
+.radial-progress[title="54"] .circle .mask.full,
+.radial-progress[title="54"] .circle .fill {
+  -webkit-transform: rotate(97.2deg);
+  -ms-transform: rotate(97.2deg);
+  transform: rotate(97.2deg);
+}
+.radial-progress[title="54"] .circle .fill.fix {
+  -webkit-transform: rotate(194.4deg);
+  -ms-transform: rotate(194.4deg);
+  transform: rotate(194.4deg);
+}
+.radial-progress[title="54"] .inset .percentage:before {
+  content: "54%";
+}
+.radial-progress[title="55"] .circle .mask.full,
+.radial-progress[title="55"] .circle .fill {
+  -webkit-transform: rotate(99deg);
+  -ms-transform: rotate(99deg);
+  transform: rotate(99deg);
+}
+.radial-progress[title="55"] .circle .fill.fix {
+  -webkit-transform: rotate(198deg);
+  -ms-transform: rotate(198deg);
+  transform: rotate(198deg);
+}
+.radial-progress[title="55"] .inset .percentage:before {
+  content: "55%";
+}
+.radial-progress[title="56"] .circle .mask.full,
+.radial-progress[title="56"] .circle .fill {
+  -webkit-transform: rotate(100.8deg);
+  -ms-transform: rotate(100.8deg);
+  transform: rotate(100.8deg);
+}
+.radial-progress[title="56"] .circle .fill.fix {
+  -webkit-transform: rotate(201.6deg);
+  -ms-transform: rotate(201.6deg);
+  transform: rotate(201.6deg);
+}
+.radial-progress[title="56"] .inset .percentage:before {
+  content: "56%";
+}
+.radial-progress[title="57"] .circle .mask.full,
+.radial-progress[title="57"] .circle .fill {
+  -webkit-transform: rotate(102.60000000000001deg);
+  -ms-transform: rotate(102.60000000000001deg);
+  transform: rotate(102.60000000000001deg);
+}
+.radial-progress[title="57"] .circle .fill.fix {
+  -webkit-transform: rotate(205.20000000000002deg);
+  -ms-transform: rotate(205.20000000000002deg);
+  transform: rotate(205.20000000000002deg);
+}
+.radial-progress[title="57"] .inset .percentage:before {
+  content: "57%";
+}
+.radial-progress[title="58"] .circle .mask.full,
+.radial-progress[title="58"] .circle .fill {
+  -webkit-transform: rotate(104.4deg);
+  -ms-transform: rotate(104.4deg);
+  transform: rotate(104.4deg);
+}
+.radial-progress[title="58"] .circle .fill.fix {
+  -webkit-transform: rotate(208.8deg);
+  -ms-transform: rotate(208.8deg);
+  transform: rotate(208.8deg);
+}
+.radial-progress[title="58"] .inset .percentage:before {
+  content: "58%";
+}
+.radial-progress[title="59"] .circle .mask.full,
+.radial-progress[title="59"] .circle .fill {
+  -webkit-transform: rotate(106.2deg);
+  -ms-transform: rotate(106.2deg);
+  transform: rotate(106.2deg);
+}
+.radial-progress[title="59"] .circle .fill.fix {
+  -webkit-transform: rotate(212.4deg);
+  -ms-transform: rotate(212.4deg);
+  transform: rotate(212.4deg);
+}
+.radial-progress[title="59"] .inset .percentage:before {
+  content: "59%";
+}
+.radial-progress[title="60"] .circle .mask.full,
+.radial-progress[title="60"] .circle .fill {
+  -webkit-transform: rotate(108deg);
+  -ms-transform: rotate(108deg);
+  transform: rotate(108deg);
+}
+.radial-progress[title="60"] .circle .fill.fix {
+  -webkit-transform: rotate(216deg);
+  -ms-transform: rotate(216deg);
+  transform: rotate(216deg);
+}
+.radial-progress[title="60"] .inset .percentage:before {
+  content: "60%";
+}
+.radial-progress[title="61"] .circle .mask.full,
+.radial-progress[title="61"] .circle .fill {
+  -webkit-transform: rotate(109.8deg);
+  -ms-transform: rotate(109.8deg);
+  transform: rotate(109.8deg);
+}
+.radial-progress[title="61"] .circle .fill.fix {
+  -webkit-transform: rotate(219.6deg);
+  -ms-transform: rotate(219.6deg);
+  transform: rotate(219.6deg);
+}
+.radial-progress[title="61"] .inset .percentage:before {
+  content: "61%";
+}
+.radial-progress[title="62"] .circle .mask.full,
+.radial-progress[title="62"] .circle .fill {
+  -webkit-transform: rotate(111.60000000000001deg);
+  -ms-transform: rotate(111.60000000000001deg);
+  transform: rotate(111.60000000000001deg);
+}
+.radial-progress[title="62"] .circle .fill.fix {
+  -webkit-transform: rotate(223.20000000000002deg);
+  -ms-transform: rotate(223.20000000000002deg);
+  transform: rotate(223.20000000000002deg);
+}
+.radial-progress[title="62"] .inset .percentage:before {
+  content: "62%";
+}
+.radial-progress[title="63"] .circle .mask.full,
+.radial-progress[title="63"] .circle .fill {
+  -webkit-transform: rotate(113.4deg);
+  -ms-transform: rotate(113.4deg);
+  transform: rotate(113.4deg);
+}
+.radial-progress[title="63"] .circle .fill.fix {
+  -webkit-transform: rotate(226.8deg);
+  -ms-transform: rotate(226.8deg);
+  transform: rotate(226.8deg);
+}
+.radial-progress[title="63"] .inset .percentage:before {
+  content: "63%";
+}
+.radial-progress[title="64"] .circle .mask.full,
+.radial-progress[title="64"] .circle .fill {
+  -webkit-transform: rotate(115.2deg);
+  -ms-transform: rotate(115.2deg);
+  transform: rotate(115.2deg);
+}
+.radial-progress[title="64"] .circle .fill.fix {
+  -webkit-transform: rotate(230.4deg);
+  -ms-transform: rotate(230.4deg);
+  transform: rotate(230.4deg);
+}
+.radial-progress[title="64"] .inset .percentage:before {
+  content: "64%";
+}
+.radial-progress[title="65"] .circle .mask.full,
+.radial-progress[title="65"] .circle .fill {
+  -webkit-transform: rotate(117deg);
+  -ms-transform: rotate(117deg);
+  transform: rotate(117deg);
+}
+.radial-progress[title="65"] .circle .fill.fix {
+  -webkit-transform: rotate(234deg);
+  -ms-transform: rotate(234deg);
+  transform: rotate(234deg);
+}
+.radial-progress[title="65"] .inset .percentage:before {
+  content: "65%";
+}
+.radial-progress[title="66"] .circle .mask.full,
+.radial-progress[title="66"] .circle .fill {
+  -webkit-transform: rotate(118.8deg);
+  -ms-transform: rotate(118.8deg);
+  transform: rotate(118.8deg);
+}
+.radial-progress[title="66"] .circle .fill.fix {
+  -webkit-transform: rotate(237.6deg);
+  -ms-transform: rotate(237.6deg);
+  transform: rotate(237.6deg);
+}
+.radial-progress[title="66"] .inset .percentage:before {
+  content: "66%";
+}
+.radial-progress[title="67"] .circle .mask.full,
+.radial-progress[title="67"] .circle .fill {
+  -webkit-transform: rotate(120.60000000000001deg);
+  -ms-transform: rotate(120.60000000000001deg);
+  transform: rotate(120.60000000000001deg);
+}
+.radial-progress[title="67"] .circle .fill.fix {
+  -webkit-transform: rotate(241.20000000000002deg);
+  -ms-transform: rotate(241.20000000000002deg);
+  transform: rotate(241.20000000000002deg);
+}
+.radial-progress[title="67"] .inset .percentage:before {
+  content: "67%";
+}
+.radial-progress[title="68"] .circle .mask.full,
+.radial-progress[title="68"] .circle .fill {
+  -webkit-transform: rotate(122.4deg);
+  -ms-transform: rotate(122.4deg);
+  transform: rotate(122.4deg);
+}
+.radial-progress[title="68"] .circle .fill.fix {
+  -webkit-transform: rotate(244.8deg);
+  -ms-transform: rotate(244.8deg);
+  transform: rotate(244.8deg);
+}
+.radial-progress[title="68"] .inset .percentage:before {
+  content: "68%";
+}
+.radial-progress[title="69"] .circle .mask.full,
+.radial-progress[title="69"] .circle .fill {
+  -webkit-transform: rotate(124.2deg);
+  -ms-transform: rotate(124.2deg);
+  transform: rotate(124.2deg);
+}
+.radial-progress[title="69"] .circle .fill.fix {
+  -webkit-transform: rotate(248.4deg);
+  -ms-transform: rotate(248.4deg);
+  transform: rotate(248.4deg);
+}
+.radial-progress[title="69"] .inset .percentage:before {
+  content: "69%";
+}
+.radial-progress[title="70"] .circle .mask.full,
+.radial-progress[title="70"] .circle .fill {
+  -webkit-transform: rotate(126deg);
+  -ms-transform: rotate(126deg);
+  transform: rotate(126deg);
+}
+.radial-progress[title="70"] .circle .fill.fix {
+  -webkit-transform: rotate(252deg);
+  -ms-transform: rotate(252deg);
+  transform: rotate(252deg);
+}
+.radial-progress[title="70"] .inset .percentage:before {
+  content: "70%";
+}
+.radial-progress[title="71"] .circle .mask.full,
+.radial-progress[title="71"] .circle .fill {
+  -webkit-transform: rotate(127.8deg);
+  -ms-transform: rotate(127.8deg);
+  transform: rotate(127.8deg);
+}
+.radial-progress[title="71"] .circle .fill.fix {
+  -webkit-transform: rotate(255.6deg);
+  -ms-transform: rotate(255.6deg);
+  transform: rotate(255.6deg);
+}
+.radial-progress[title="71"] .inset .percentage:before {
+  content: "71%";
+}
+.radial-progress[title="72"] .circle .mask.full,
+.radial-progress[title="72"] .circle .fill {
+  -webkit-transform: rotate(129.6deg);
+  -ms-transform: rotate(129.6deg);
+  transform: rotate(129.6deg);
+}
+.radial-progress[title="72"] .circle .fill.fix {
+  -webkit-transform: rotate(259.2deg);
+  -ms-transform: rotate(259.2deg);
+  transform: rotate(259.2deg);
+}
+.radial-progress[title="72"] .inset .percentage:before {
+  content: "72%";
+}
+.radial-progress[title="73"] .circle .mask.full,
+.radial-progress[title="73"] .circle .fill {
+  -webkit-transform: rotate(131.4deg);
+  -ms-transform: rotate(131.4deg);
+  transform: rotate(131.4deg);
+}
+.radial-progress[title="73"] .circle .fill.fix {
+  -webkit-transform: rotate(262.8deg);
+  -ms-transform: rotate(262.8deg);
+  transform: rotate(262.8deg);
+}
+.radial-progress[title="73"] .inset .percentage:before {
+  content: "73%";
+}
+.radial-progress[title="74"] .circle .mask.full,
+.radial-progress[title="74"] .circle .fill {
+  -webkit-transform: rotate(133.20000000000002deg);
+  -ms-transform: rotate(133.20000000000002deg);
+  transform: rotate(133.20000000000002deg);
+}
+.radial-progress[title="74"] .circle .fill.fix {
+  -webkit-transform: rotate(266.40000000000003deg);
+  -ms-transform: rotate(266.40000000000003deg);
+  transform: rotate(266.40000000000003deg);
+}
+.radial-progress[title="74"] .inset .percentage:before {
+  content: "74%";
+}
+.radial-progress[title="75"] .circle .mask.full,
+.radial-progress[title="75"] .circle .fill {
+  -webkit-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+.radial-progress[title="75"] .circle .fill.fix {
+  -webkit-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  transform: rotate(270deg);
+}
+.radial-progress[title="75"] .inset .percentage:before {
+  content: "75%";
+}
+.radial-progress[title="76"] .circle .mask.full,
+.radial-progress[title="76"] .circle .fill {
+  -webkit-transform: rotate(136.8deg);
+  -ms-transform: rotate(136.8deg);
+  transform: rotate(136.8deg);
+}
+.radial-progress[title="76"] .circle .fill.fix {
+  -webkit-transform: rotate(273.6deg);
+  -ms-transform: rotate(273.6deg);
+  transform: rotate(273.6deg);
+}
+.radial-progress[title="76"] .inset .percentage:before {
+  content: "76%";
+}
+.radial-progress[title="77"] .circle .mask.full,
+.radial-progress[title="77"] .circle .fill {
+  -webkit-transform: rotate(138.6deg);
+  -ms-transform: rotate(138.6deg);
+  transform: rotate(138.6deg);
+}
+.radial-progress[title="77"] .circle .fill.fix {
+  -webkit-transform: rotate(277.2deg);
+  -ms-transform: rotate(277.2deg);
+  transform: rotate(277.2deg);
+}
+.radial-progress[title="77"] .inset .percentage:before {
+  content: "77%";
+}
+.radial-progress[title="78"] .circle .mask.full,
+.radial-progress[title="78"] .circle .fill {
+  -webkit-transform: rotate(140.4deg);
+  -ms-transform: rotate(140.4deg);
+  transform: rotate(140.4deg);
+}
+.radial-progress[title="78"] .circle .fill.fix {
+  -webkit-transform: rotate(280.8deg);
+  -ms-transform: rotate(280.8deg);
+  transform: rotate(280.8deg);
+}
+.radial-progress[title="78"] .inset .percentage:before {
+  content: "78%";
+}
+.radial-progress[title="79"] .circle .mask.full,
+.radial-progress[title="79"] .circle .fill {
+  -webkit-transform: rotate(142.20000000000002deg);
+  -ms-transform: rotate(142.20000000000002deg);
+  transform: rotate(142.20000000000002deg);
+}
+.radial-progress[title="79"] .circle .fill.fix {
+  -webkit-transform: rotate(284.40000000000003deg);
+  -ms-transform: rotate(284.40000000000003deg);
+  transform: rotate(284.40000000000003deg);
+}
+.radial-progress[title="79"] .inset .percentage:before {
+  content: "79%";
+}
+.radial-progress[title="80"] .circle .mask.full,
+.radial-progress[title="80"] .circle .fill {
+  -webkit-transform: rotate(144deg);
+  -ms-transform: rotate(144deg);
+  transform: rotate(144deg);
+}
+.radial-progress[title="80"] .circle .fill.fix {
+  -webkit-transform: rotate(288deg);
+  -ms-transform: rotate(288deg);
+  transform: rotate(288deg);
+}
+.radial-progress[title="80"] .inset .percentage:before {
+  content: "80%";
+}
+.radial-progress[title="81"] .circle .mask.full,
+.radial-progress[title="81"] .circle .fill {
+  -webkit-transform: rotate(145.8deg);
+  -ms-transform: rotate(145.8deg);
+  transform: rotate(145.8deg);
+}
+.radial-progress[title="81"] .circle .fill.fix {
+  -webkit-transform: rotate(291.6deg);
+  -ms-transform: rotate(291.6deg);
+  transform: rotate(291.6deg);
+}
+.radial-progress[title="81"] .inset .percentage:before {
+  content: "81%";
+}
+.radial-progress[title="82"] .circle .mask.full,
+.radial-progress[title="82"] .circle .fill {
+  -webkit-transform: rotate(147.6deg);
+  -ms-transform: rotate(147.6deg);
+  transform: rotate(147.6deg);
+}
+.radial-progress[title="82"] .circle .fill.fix {
+  -webkit-transform: rotate(295.2deg);
+  -ms-transform: rotate(295.2deg);
+  transform: rotate(295.2deg);
+}
+.radial-progress[title="82"] .inset .percentage:before {
+  content: "82%";
+}
+.radial-progress[title="83"] .circle .mask.full,
+.radial-progress[title="83"] .circle .fill {
+  -webkit-transform: rotate(149.4deg);
+  -ms-transform: rotate(149.4deg);
+  transform: rotate(149.4deg);
+}
+.radial-progress[title="83"] .circle .fill.fix {
+  -webkit-transform: rotate(298.8deg);
+  -ms-transform: rotate(298.8deg);
+  transform: rotate(298.8deg);
+}
+.radial-progress[title="83"] .inset .percentage:before {
+  content: "83%";
+}
+.radial-progress[title="84"] .circle .mask.full,
+.radial-progress[title="84"] .circle .fill {
+  -webkit-transform: rotate(151.20000000000002deg);
+  -ms-transform: rotate(151.20000000000002deg);
+  transform: rotate(151.20000000000002deg);
+}
+.radial-progress[title="84"] .circle .fill.fix {
+  -webkit-transform: rotate(302.40000000000003deg);
+  -ms-transform: rotate(302.40000000000003deg);
+  transform: rotate(302.40000000000003deg);
+}
+.radial-progress[title="84"] .inset .percentage:before {
+  content: "84%";
+}
+.radial-progress[title="85"] .circle .mask.full,
+.radial-progress[title="85"] .circle .fill {
+  -webkit-transform: rotate(153deg);
+  -ms-transform: rotate(153deg);
+  transform: rotate(153deg);
+}
+.radial-progress[title="85"] .circle .fill.fix {
+  -webkit-transform: rotate(306deg);
+  -ms-transform: rotate(306deg);
+  transform: rotate(306deg);
+}
+.radial-progress[title="85"] .inset .percentage:before {
+  content: "85%";
+}
+.radial-progress[title="86"] .circle .mask.full,
+.radial-progress[title="86"] .circle .fill {
+  -webkit-transform: rotate(154.8deg);
+  -ms-transform: rotate(154.8deg);
+  transform: rotate(154.8deg);
+}
+.radial-progress[title="86"] .circle .fill.fix {
+  -webkit-transform: rotate(309.6deg);
+  -ms-transform: rotate(309.6deg);
+  transform: rotate(309.6deg);
+}
+.radial-progress[title="86"] .inset .percentage:before {
+  content: "86%";
+}
+.radial-progress[title="87"] .circle .mask.full,
+.radial-progress[title="87"] .circle .fill {
+  -webkit-transform: rotate(156.6deg);
+  -ms-transform: rotate(156.6deg);
+  transform: rotate(156.6deg);
+}
+.radial-progress[title="87"] .circle .fill.fix {
+  -webkit-transform: rotate(313.2deg);
+  -ms-transform: rotate(313.2deg);
+  transform: rotate(313.2deg);
+}
+.radial-progress[title="87"] .inset .percentage:before {
+  content: "87%";
+}
+.radial-progress[title="88"] .circle .mask.full,
+.radial-progress[title="88"] .circle .fill {
+  -webkit-transform: rotate(158.4deg);
+  -ms-transform: rotate(158.4deg);
+  transform: rotate(158.4deg);
+}
+.radial-progress[title="88"] .circle .fill.fix {
+  -webkit-transform: rotate(316.8deg);
+  -ms-transform: rotate(316.8deg);
+  transform: rotate(316.8deg);
+}
+.radial-progress[title="88"] .inset .percentage:before {
+  content: "88%";
+}
+.radial-progress[title="89"] .circle .mask.full,
+.radial-progress[title="89"] .circle .fill {
+  -webkit-transform: rotate(160.20000000000002deg);
+  -ms-transform: rotate(160.20000000000002deg);
+  transform: rotate(160.20000000000002deg);
+}
+.radial-progress[title="89"] .circle .fill.fix {
+  -webkit-transform: rotate(320.40000000000003deg);
+  -ms-transform: rotate(320.40000000000003deg);
+  transform: rotate(320.40000000000003deg);
+}
+.radial-progress[title="89"] .inset .percentage:before {
+  content: "89%";
+}
+.radial-progress[title="90"] .circle .mask.full,
+.radial-progress[title="90"] .circle .fill {
+  -webkit-transform: rotate(162deg);
+  -ms-transform: rotate(162deg);
+  transform: rotate(162deg);
+}
+.radial-progress[title="90"] .circle .fill.fix {
+  -webkit-transform: rotate(324deg);
+  -ms-transform: rotate(324deg);
+  transform: rotate(324deg);
+}
+.radial-progress[title="90"] .inset .percentage:before {
+  content: "90%";
+}
+.radial-progress[title="91"] .circle .mask.full,
+.radial-progress[title="91"] .circle .fill {
+  -webkit-transform: rotate(163.8deg);
+  -ms-transform: rotate(163.8deg);
+  transform: rotate(163.8deg);
+}
+.radial-progress[title="91"] .circle .fill.fix {
+  -webkit-transform: rotate(327.6deg);
+  -ms-transform: rotate(327.6deg);
+  transform: rotate(327.6deg);
+}
+.radial-progress[title="91"] .inset .percentage:before {
+  content: "91%";
+}
+.radial-progress[title="92"] .circle .mask.full,
+.radial-progress[title="92"] .circle .fill {
+  -webkit-transform: rotate(165.6deg);
+  -ms-transform: rotate(165.6deg);
+  transform: rotate(165.6deg);
+}
+.radial-progress[title="92"] .circle .fill.fix {
+  -webkit-transform: rotate(331.2deg);
+  -ms-transform: rotate(331.2deg);
+  transform: rotate(331.2deg);
+}
+.radial-progress[title="92"] .inset .percentage:before {
+  content: "92%";
+}
+.radial-progress[title="93"] .circle .mask.full,
+.radial-progress[title="93"] .circle .fill {
+  -webkit-transform: rotate(167.4deg);
+  -ms-transform: rotate(167.4deg);
+  transform: rotate(167.4deg);
+}
+.radial-progress[title="93"] .circle .fill.fix {
+  -webkit-transform: rotate(334.8deg);
+  -ms-transform: rotate(334.8deg);
+  transform: rotate(334.8deg);
+}
+.radial-progress[title="93"] .inset .percentage:before {
+  content: "93%";
+}
+.radial-progress[title="94"] .circle .mask.full,
+.radial-progress[title="94"] .circle .fill {
+  -webkit-transform: rotate(169.20000000000002deg);
+  -ms-transform: rotate(169.20000000000002deg);
+  transform: rotate(169.20000000000002deg);
+}
+.radial-progress[title="94"] .circle .fill.fix {
+  -webkit-transform: rotate(338.40000000000003deg);
+  -ms-transform: rotate(338.40000000000003deg);
+  transform: rotate(338.40000000000003deg);
+}
+.radial-progress[title="94"] .inset .percentage:before {
+  content: "94%";
+}
+.radial-progress[title="95"] .circle .mask.full,
+.radial-progress[title="95"] .circle .fill {
+  -webkit-transform: rotate(171deg);
+  -ms-transform: rotate(171deg);
+  transform: rotate(171deg);
+}
+.radial-progress[title="95"] .circle .fill.fix {
+  -webkit-transform: rotate(342deg);
+  -ms-transform: rotate(342deg);
+  transform: rotate(342deg);
+}
+.radial-progress[title="95"] .inset .percentage:before {
+  content: "95%";
+}
+.radial-progress[title="96"] .circle .mask.full,
+.radial-progress[title="96"] .circle .fill {
+  -webkit-transform: rotate(172.8deg);
+  -ms-transform: rotate(172.8deg);
+  transform: rotate(172.8deg);
+}
+.radial-progress[title="96"] .circle .fill.fix {
+  -webkit-transform: rotate(345.6deg);
+  -ms-transform: rotate(345.6deg);
+  transform: rotate(345.6deg);
+}
+.radial-progress[title="96"] .inset .percentage:before {
+  content: "96%";
+}
+.radial-progress[title="97"] .circle .mask.full,
+.radial-progress[title="97"] .circle .fill {
+  -webkit-transform: rotate(174.6deg);
+  -ms-transform: rotate(174.6deg);
+  transform: rotate(174.6deg);
+}
+.radial-progress[title="97"] .circle .fill.fix {
+  -webkit-transform: rotate(349.2deg);
+  -ms-transform: rotate(349.2deg);
+  transform: rotate(349.2deg);
+}
+.radial-progress[title="97"] .inset .percentage:before {
+  content: "97%";
+}
+.radial-progress[title="98"] .circle .mask.full,
+.radial-progress[title="98"] .circle .fill {
+  -webkit-transform: rotate(176.4deg);
+  -ms-transform: rotate(176.4deg);
+  transform: rotate(176.4deg);
+}
+.radial-progress[title="98"] .circle .fill.fix {
+  -webkit-transform: rotate(352.8deg);
+  -ms-transform: rotate(352.8deg);
+  transform: rotate(352.8deg);
+}
+.radial-progress[title="98"] .inset .percentage:before {
+  content: "98%";
+}
+.radial-progress[title="99"] .circle .mask.full,
+.radial-progress[title="99"] .circle .fill {
+  -webkit-transform: rotate(178.20000000000002deg);
+  -ms-transform: rotate(178.20000000000002deg);
+  transform: rotate(178.20000000000002deg);
+}
+.radial-progress[title="99"] .circle .fill.fix {
+  -webkit-transform: rotate(356.40000000000003deg);
+  -ms-transform: rotate(356.40000000000003deg);
+  transform: rotate(356.40000000000003deg);
+}
+.radial-progress[title="99"] .inset .percentage:before {
+  content: "99%";
+}
+.radial-progress[title="100"] .circle .mask.full,
+.radial-progress[title="100"] .circle .fill {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.radial-progress[title="100"] .circle .fill.fix {
+  -webkit-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+.radial-progress[title="100"] .inset .percentage:before {
+  content: "100%";
+}
