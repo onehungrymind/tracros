@@ -4,9 +4,12 @@
   "description": "A macronturient tracking application built in Angular 2 and Firebase",
   "repository": "https://github.com/onehungrymind/tracros",
   "scripts": {
+    "build": "webpack && cp builder/index.build.html build/index.html",
     "client": "npm run client:dev:hmr",
     "client:dev": "webpack-dev-server --inline --colors --watch --display-error-details --display-cached  --port 3000 --content-base client/public",
     "client:dev:hmr": "npm run client:dev -- --hot",
+    "deploy": "gh-pages -d build -m \"gh-pages deploy\"",
+    "push": "npm run build && npm run deploy",
     "test": "karma start",
     "start": "npm run client"
   },
@@ -31,6 +34,7 @@
     "concurrently": "^2.0.0",
     "core-js": "^2.4.0",
     "css-loader": "^0.23.1",
+    "gh-pages": "^0.11.0",
     "jasmine-core": "^2.4.1",
     "karma": "^0.13.22",
     "karma-coverage": "^1.0.0",
