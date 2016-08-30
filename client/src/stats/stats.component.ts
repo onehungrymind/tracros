@@ -1,6 +1,6 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import {Food} from '../foods/food.model';
-import {Guage} from '../guage/guage.component';
+import {Gauge} from '../gauge/gauge.component';
 import {AngularFire, FirebaseListObservable} from 'angularfire2';
 import {profile} from '../profile/mockProfile';
 
@@ -10,11 +10,11 @@ import {profile} from '../profile/mockProfile';
     <h3>Stats</h3>
     <div class="mdl-grid">
       <div class="mdl-cell--6-col" *ngFor="let metric of metrics">
-        <guage
+        <gauge
           [foods]="foods"
           [label]="metric.name"
           [threshold]="metric.threshold"
-        ></guage>
+        ></gauge>
       </div>
     </div>
   `,
@@ -26,7 +26,7 @@ import {profile} from '../profile/mockProfile';
       margin-bottom: 24px;
     }
   `],
-  directives: [Guage]
+  directives: [Gauge]
 })
 export class Stats {
   foods: FirebaseListObservable<Food[]> = this.af.database.list('foods');

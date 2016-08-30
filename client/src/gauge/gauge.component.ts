@@ -1,12 +1,10 @@
+import {Input, Component, OnInit} from '@angular/core';
 import {Observable} from 'rxjs/Observable';
-import {Input, Component} from '@angular/core';
-import {Food} from '../foods/food.model';
 import {FirebaseListObservable} from 'angularfire2';
-import 'rxjs/add/operator/scan';
 import 'rxjs/add/operator/do';
 
 @Component({
-  selector: 'guage',
+  selector: 'gauge',
   template: `
     <h5>{{label}} | <span>{{level | async}}/{{threshold}}</span></h5>
     <div class="radial-progress" title="{{percentage}}">
@@ -26,7 +24,7 @@ import 'rxjs/add/operator/do';
     </div>
   `,
     styles: [
-      require('./guage.css'),
+      require('./gauge.css'),
       `
         .radial-progress {
           position: relative;
@@ -55,7 +53,7 @@ import 'rxjs/add/operator/do';
       `
     ]
 })
-export class Guage {
+export class Gauge implements OnInit {
     @Input() threshold: number;
     @Input() label: string;
     @Input() foods: FirebaseListObservable<any>;
@@ -69,18 +67,13 @@ export class Guage {
           return acc + parseInt(curr[field], 10);
         }, 0))
         .do(total => {
-          const percentage = Math.round(total / this.threshold * 100);
-          this.percentage = percentage <= 100 ? percentage : 100;
+          this.percentage = this.calculatePercentage(total, this.threshold)
         });
+    }
 
-      // TODO: alternate implementation; get feedback
-      // this.level = this.foods
-      //   .flatMap(food => food)
-      //   .scan((acc, curr) => acc + parseInt(curr[field], 10), 0)
-      //   .do(total => {
-      //     const percentage = Math.round(total / this.threshold * 100);
-      //     this.percentage = percentage <= 100 ? percentage : 100;
-      //   });
+    calculatePercentage(total, threshold) {
+      const percentage = Math.round(total / threshold * 100);
+      return percentage <= 100 ? percentage : 100;
     }
 
     getClassDefs() {
