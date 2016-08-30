@@ -6,7 +6,7 @@ import 'rxjs/add/operator/scan';
 import 'rxjs/add/operator/do';
 
 @Component({
-  selector: 'guage',
+  selector: 'gauge',
   template: `
     <h5>{{label}} | <span>{{level | async}}/{{threshold}}</span></h5>
     <div class="radial-progress" title="{{percentage}}">
@@ -26,7 +26,7 @@ import 'rxjs/add/operator/do';
     </div>
   `,
     styles: [
-      require('./guage.css'),
+      require('./gauge.css'),
       `
         .radial-progress {
           position: relative;
@@ -55,7 +55,7 @@ import 'rxjs/add/operator/do';
       `
     ]
 })
-export class Guage {
+export class Gauge {
     @Input() threshold: number;
     @Input() label: string;
     @Input() foods: FirebaseListObservable<any>;
